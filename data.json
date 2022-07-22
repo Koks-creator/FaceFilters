@@ -1,0 +1,113 @@
+{
+    "mask1": {
+        "ImgPath": "mask.png",
+        "Top": 5,
+        "Left": 213,
+        "Right": 433,
+        "Bottom": 152,
+        "Adj": 1.2,
+        "HeightAdj": 0,
+        "LeftAdj": 0
+    },
+    "nose1": {
+        "ImgPath": "pig_nose.png",
+        "Top": 195,
+        "Left": 203,
+        "Right": 423,
+        "Bottom": 2,
+        "Adj": 1.2,
+        "HeightAdj": 0,
+        "LeftAdj": 0
+    },
+    "glasses1": {
+        "ImgPath": "fancy_glasses.png",
+        "Top": 168,
+        "Left": 33,
+        "Right": 263,
+        "Bottom": 195,
+        "Adj": 1.5,
+        "HeightAdj": 0,
+        "LeftAdj": 0
+    },
+    "glasses2": {
+        "ImgPath": "semi-round-glasses.png",
+        "Top": 168,
+        "Left": 33,
+        "Right": 263,
+        "Bottom": 195,
+        "Adj": 1.5,
+        "HeightAdj": 0,
+        "LeftAdj": 0
+    },
+    "face1": {
+        "ImgPath": "cool.png",
+        "Top": 10,
+        "Left": 234,
+        "Right": 454,
+        "Bottom": 152,
+        "Adj": 1.8,
+        "HeightAdj": 0,
+        "LeftAdj": 0
+    },
+    "glasses3": {
+        "ImgPath": "smart-glasses.png",
+        "Top": 168,
+        "Left": 33,
+        "Right": 263,
+        "Bottom": 195,
+        "Adj": 1.5,
+        "HeightAdj": 0,
+        "LeftAdj": 0
+    },
+     "glasses4": {
+        "ImgPath": "sunglasses.png",
+        "Top": 168,
+        "Left": 33,
+        "Right": 263,
+        "Bottom": 195,
+        "Adj": 1.5,
+         "HeightAdj": 0,
+         "LeftAdj": 0
+    },
+     "glasses5": {
+         "ImgPath": "glasses-with-mustache.png",
+         "Top": 168,
+         "Left": 33,
+         "Right": 263,
+         "Bottom": 15,
+         "Adj": 1.8,
+         "HeightAdj": 0,
+         "LeftAdj": 0
+     },
+     "glasses6": {
+         "ImgPath": "ski-goggles.png",
+         "Top": 168,
+         "Left": 33,
+         "Right": 263,
+         "Bottom": 195,
+         "Adj": 1.9,
+         "HeightAdj": 0,
+         "LeftAdj": 0
+     },
+     "helmet1": {
+         "ImgPath": "helmet.png",
+         "Top": 10,
+         "Left": 63,
+         "Right": 293,
+         "Bottom": 10,
+         "Adj": 1.5,
+         "HeightAdj": -75,
+         "LeftAdj": 0
+     },
+     "helmet2": {
+         "ImgPath": "knight.png",
+         "Top": 10,
+         "Left": 123,
+         "Right": 352,
+         "Bottom": 152,
+         "Adj": 2.8,
+         "HeightAdj": -55,
+         "LeftAdj": 50
+     }
+
+}

@@ -1,0 +1,126 @@
+#:import utils kivy.utils
+<Grid@GridLayout>:
+<DummyScreen>
+    FloatLayout:
+        col: 1
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex('#5a189a')
+
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            # this is where the video will show
+            # the id allows easy access
+            id: vid2
+            size: 800, 1200
+            allow_stretch: True  # allow the video image to be scaled
+            keep_ratio: True  # keep the aspect ratio so people don't look squashed
+            pos_hint: {'x':0.001, 'y': .14}
+            size_hint: 1, 1
+
+        Label:
+            text: "Do you want to save photo?"
+            pos_hint: {'x':0.41, 'y': .005}
+            size_hint: .15, .15
+            font_size: 25
+
+
+        Button:
+            pos_hint: {'x':0.75, 'y': .018}
+            size_hint: 0.11, 0.11
+            background_normal: "AppImages/accept.png"
+            on_press:
+                app.save_frame_function()
+
+        Button:
+            pos_hint: {'x':0.11, 'y': .018}
+            size_hint: 0.11, 0.11
+            background_normal: "AppImages/cancel.png"
+            on_press:
+                app.root.current = "main"
+
+<MainScreen>:
+    container: container
+
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex('#5a189a')
+
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Image:
+            # this is where the video will show
+            # the id allows easy access
+            id: vid
+            allow_stretch: True  # allow the video image to be scaled
+            keep_ratio: True  # keep the aspect ratio so people don't look squashed
+            pos_hint: {'x':0.1, 'y': .15}
+            size_hint: 1, .85
+
+        Button:
+            pos_hint: {'x':0.5, 'y': .015}
+            size_hint: 0.15, 0.12
+            background_normal: "AppImages/photo-camera.png"
+            background_down: "AppImages/photo-camera.png"
+            on_press:
+                app.save_screen_function()
+                #app.root.current = "main"
+
+    GridLayout:
+        rows: 3
+        cols: 1
+        spacing: 5
+        padding: 5
+        font_name: "Calibri"
+        size_hint_x: None
+        #size_hint: (None, .5)
+
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex('#9d4edd')
+
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Button:
+            background_normal: r"AppImages/up-arrow.png"
+            background_down: "AppImages/up2.png"
+            pos_hint: {'x':0.2, 'y': .05}
+            size_hint: 0.8, 0.12
+            on_press: root.index_enlarge()
+
+        ScrollView:
+            size_hint: (1, .9)
+            #bar_width: 10
+            #bar_color: 1, 0, 0, 1   # red
+            #bar_inactive_color: 0, 0, 1, 1   # blue
+            effect_cls: "ScrollEffect"
+            scroll_type: ['content']
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, .6
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            StackLayout:
+                id: container
+                size_hint_y: None
+        Button:
+            background_normal: r"AppImages/up-arrow.png"
+            background_down: "AppImages/up2.png"
+            pos_hint: {'x':0.2, 'y': .05}
+            size_hint: 0.8, 0.12
+            on_press: root.index_diminish()
+            canvas.before:
+                PushMatrix
+                Rotate:
+                    angle: 180
+                    origin: self.center
